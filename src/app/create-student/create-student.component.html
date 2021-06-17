@@ -1,0 +1,14 @@
+<form>
+      <h3>StudentCode</h3>
+      <input name = "name" type="text" [(ngModel)]="student.studentCode" placeholder="StudentCode">
+      <h3>Name</h3>
+      <input name = "name" type="text" [(ngModel)]="student.name">
+      <h3>Gender</h3>
+      <input name = "gender" type="radio" [(ngModel)]="student.gender" value="nam" > Nam
+      <input name = "gender" type="radio" [(ngModel)]="student.gender" value="nữ" > Nữ
+      <h3>Address</h3>
+     <input name = "name" type="text" [(ngModel)]="student.address">
+     <br>
+     <button  type="submit" (click)="addNewStudent()">Create</button>
+  
+</form>

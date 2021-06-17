@@ -1,0 +1,17 @@
+<h1>list student </h1>
+<a routerLink="/create">Create new student</a>
+<table class="table table-striped" border="1px">
+  <tr>
+    <td>StudentCode</td>
+    <td>Name</td>
+    <td>Gender</td>
+    <td>Address</td>
+  </tr>
+  <tr *ngFor="let student of listStudents">
+    <td>{{student.studentCode}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.gender}}</td>
+    <td>{{student.address}}</td>
+
+  </tr>
+</table>

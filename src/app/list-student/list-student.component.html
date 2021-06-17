@@ -6,12 +6,15 @@
     <td>Name</td>
     <td>Gender</td>
     <td>Address</td>
+    <td>Sửa</td>
   </tr>
   <tr *ngFor="let student of listStudents">
     <td>{{student.studentCode}}</td>
     <td>{{student.name}}</td>
     <td>{{student.gender}}</td>
     <td>{{student.address}}</td>
+    <button type="button" class="btn btn-outline-success" [routerLink]="'update/'+student.id">Sửa</button>
+
 
   </tr>
 </table>

@@ -1,1 +1,15 @@
-<p>update-product works!</p>
+<form (ngSubmit)="updateStudent(students.id)">
+    <h3>StudentCode</h3>
+    <input name = "name" type="text" [(ngModel)]="students.studentCode" >
+    <h3>Name</h3>
+    <input name = "name" type="text" [(ngModel)]="students.name">
+    <h3>Gender</h3>
+    <input name = "gender" type="radio" [(ngModel)]="students.gender" value="nam" > Nam
+    <input name = "gender" type="radio" [(ngModel)]="students.gender" value="nữ" > Nữ
+    <input name = "gender" type="radio" [(ngModel)]="students.gender" value="khác" > Khác
+    <h3>Address</h3>
+   <input name = "name" type="text" [(ngModel)]="students.address">
+
+    <button class="badge-success" type="submit" >Update</button>
+  
+  </form>

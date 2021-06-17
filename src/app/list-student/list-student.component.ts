@@ -22,9 +22,6 @@ export class ListStudentComponent implements OnInit {
     this.studentService.getAllStudent().subscribe(student =>{
       console.log("test")
       this.listStudents = student
-      console.log("test2")
     });
   }
-
-
 }

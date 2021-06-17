@@ -10,22 +10,22 @@ const URL_BACKEND = `${environment.apiUrl}`;
 })
 export class StudentService {
   getAllStudent(): Observable<IStudent[]>{
-    return this.http.get<IStudent[]>("http://localhost:8080/student");
+    return this.http.get<IStudent[]>(URL_BACKEND + "student");
   }
 
-  getStudenttById(id: string): Observable<IStudent> {
+  getStudenttById(id: any): Observable<IStudent> {
     return this.http.get<IStudent>(URL_BACKEND + 'student' + `${id}`);
   }
 
   createStudent(student : IStudent): Observable<IStudent>{
-    return this.http.post<IStudent>("http://localhost:8080/student/create",student);
+    return this.http.post<IStudent>(URL_BACKEND+ "student/create",student);
   }
 
-  updateStudent(id: string , student: IStudent): Observable<IStudent> {
-    return this.http.put<IStudent>(URL_BACKEND +'student' +id , student);
+  updateStudent(id: any , student: IStudent): Observable<IStudent> {
+    return this.http.put<IStudent>(URL_BACKEND +'student/' +id , student);
   }
 
-  deleteStudent(id : string): Observable<IStudent[]>{
+  deleteStudent(id : any): Observable<IStudent[]>{
     return this.http.delete<IStudent[]>(URL_BACKEND + 'student/' + id);
   }
 
